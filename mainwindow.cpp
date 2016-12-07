@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
    ui->setupUi(this);
    QObject::connect(ui->set, SIGNAL(triggered(bool)),
                     this, SLOT(on_set(bool))) ;
-   ui->listWidget->addItem("test");
 }
 
 MainWindow::~MainWindow()
