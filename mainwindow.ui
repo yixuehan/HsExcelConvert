@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>666</width>
-    <height>469</height>
+    <width>800</width>
+    <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,23 +37,46 @@
              </widget>
             </item>
             <item>
-             <widget class="QListWidget" name="listWidget"/>
+             <widget class="QListWidget" name="newInterfaceList"/>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="modInterface">
               <property name="text">
                <string>修改接口</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QTabWidget" name="modInterface">
+             <widget class="QTabWidget" name="modInterfaceTab">
               <property name="tabPosition">
                <enum>QTabWidget::North</enum>
               </property>
               <property name="currentIndex">
-               <number>-1</number>
+               <number>0</number>
               </property>
+              <widget class="QWidget" name="tab">
+               <attribute name="title">
+                <string>页</string>
+               </attribute>
+               <widget class="QPushButton" name="pushButton">
+                <property name="geometry">
+                 <rect>
+                  <x>70</x>
+                  <y>80</y>
+                  <width>75</width>
+                  <height>23</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>PushButton</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="tab_3">
+               <attribute name="title">
+                <string>页</string>
+               </attribute>
+              </widget>
              </widget>
             </item>
            </layout>
@@ -94,7 +117,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>666</width>
+     <width>800</width>
      <height>23</height>
     </rect>
    </property>
