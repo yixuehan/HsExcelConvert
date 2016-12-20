@@ -10,7 +10,7 @@
 #include <boost/property_tree/info_parser.hpp>
 #include <QMessageBox>
 #include <boost/format.hpp>
-#include <QtXlsx>
+#include <QtXlsx/QtXlsx>
 #include <iostream>
 #include <QString>
 

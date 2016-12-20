@@ -12,10 +12,13 @@ public:
    GenInterface();
    void convert(const std::vector<std::string> &newInterfaces,
                 const std::vector<std::string> &modInterfaces) ;
-   void setPWorkbook(QXlsx::Workbook *value);
+
+
    
+   void setPWorksheet(QXlsx::Worksheet *value);
+
 private:
-   QXlsx::Workbook *pWorkbook ;
+   QXlsx::Worksheet *pWorksheet ;
    
    
 private:

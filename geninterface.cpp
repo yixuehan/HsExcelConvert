@@ -18,13 +18,25 @@ void GenInterface::convert(const std::vector<std::string> &newInterfaces,
    }
 }
 
-void GenInterface::setPWorkbook(QXlsx::Workbook *value)
+void GenInterface::setPWorksheet(QXlsx::Worksheet *value)
 {
-   pWorkbook = value;
+   pWorksheet = value;
 }
+
 
 void GenInterface::initSheet()
 {
    // …Ë÷√±≥æ∞…´
-   
+   int r = 204,
+       g = 255,
+       b = 255;
+   QXlsx::Format fmt ;
+
+
+   fmt.setPatternBackgroundColor(QColor(r,g,b));
+   for ( i = 0; i < 65536; ++i ) {
+      for ( j = 0; j < 65536; ++j ) {
+         pWorksheet->write(i, j, QVariant(), fmt) ;
+      }
+   }
 }
