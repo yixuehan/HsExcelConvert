@@ -1,8 +1,16 @@
-keyBackColor "204 255 255"
+keyBackgroundColor "255 255 153"
 valueBackColor "0 0 0"
-modFontColor ""
-fontSize ""
-fontName ""
+docBackgroundColor "204 255 255"
+valueBackgroundColor "255 255 255"
+applyBackgroundColor "255 204 153"
+modFontColor "255 0 0"
+keyFontName "宋体"
+valueFontName "Courier New"
+fontSize "10"
+applyFontSize "12"
+
+datatypeConf  E:/恒生电子/svn_new/trunk/Sources/DevCodes/领投宝/公共资源/datatypes.xml
+stdfieldConf  E:/恒生电子/svn_new/trunk/Sources/DevCodes/领投宝/公共资源/stdfields.xml
 
 resourceInterface
 {
@@ -16,7 +24,7 @@ resourceInterface
    {
       功能名称
       版本号
-      结果集返回
+      OpenAPI更新日期
    }
    keyValue
    {
@@ -41,7 +49,7 @@ resourceInterface
    }
    keyValue
    {
-      OpenAPI业务范围
+      OpenAPI业务范围  精英汇
       HTTP请求方式   GET,POST
       功能状态        公开
    }
@@ -66,14 +74,14 @@ resourceInterface
    }
    keyValue
    {
-      请求示例  "http://open.hs.net/com/v1/{0}?sendercomp_id=20001"
+      请求示例  "http://open.hs.net/com/v1/%1%?sendercomp_id=20001"
       {
          merge "3:7"
       }
    }
    keyValue
    {
-      正确返回示例
+      正确返回示例  "{\"data\":{\"%1%\":\"1\"}}"
       {
          merge "3:7"
       }
@@ -103,12 +111,16 @@ resourceInterface
    }
    value
    {
-      输入参数
-      参数名
-      类型
-      说明
-      必须
-      缺省值
+      import
+      {
+         输入参数
+         参数名
+         类型
+         说明
+         必须
+         缺省值
+      }
+      
    }
    key
    {
@@ -116,17 +128,21 @@ resourceInterface
       参数名
       类型
       说明
-      长度
+      必须
       缺省值
    }
    value
    {
-      输出参数
-      参数名
-      类型
-      说明
-      长度
-      缺省值
+      export
+      {
+         输出参数
+         参数名
+         类型
+         说明
+         必须
+         缺省值
+      }
+     
    }
    key
    {
@@ -150,19 +166,26 @@ resourceInterface
       错误信息
       错误说明
       错误级别
+      ""
    }
    key
    {
       修改记录
+      ""
       {
          merge "3:7"
       }
    }
    keyValue
    {
-      ""
+      ""  修改记录
       {
          merge "3:7"
       }      
    }
+}
+
+申请说明
+{
+   merge "2:7"
 }

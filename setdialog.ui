@@ -75,7 +75,7 @@
     <string>修改单号：</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="save">
    <property name="geometry">
     <rect>
      <x>20</x>

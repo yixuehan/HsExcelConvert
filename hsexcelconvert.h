@@ -13,59 +13,58 @@
 #include <QtXlsx/QtXlsx>
 #include <iostream>
 #include <QString>
+using namespace std ;
 
 #include "geninterface.h"
 
 class HsExcelConvert
 {
 public:
-   HsExcelConvert();
+   HsExcelConvert(shared_ptr<boost::property_tree::ptree> pSetting);
    
-   // 新增的接口文件
-   void addNewInterfaceFile(const std::string &fileName ) ;
-   // 需要修改的接口文件
-   void addModInterfaceFile(const std::string &fileName ) ;
+//   // 新增的接口文件
+//   void addNewInterfaceFile(const string &fileName ) ;
+//   // 需要修改的接口文件
+//   void addModInterfaceFile(const string &fileName ) ;
    // 设置数据类型文件
-   void setDatatypeFile(const std::string &fileName ) ;
+   void setDatatypeFile(const string &fileName ) ;
    // 设置标准字段文件
-   void setStdfieldFile(const std::string &fileName) ;
+   void setStdfieldFile(const string &fileName) ;
+   // 读取资源转换类的配置文件
+   void readConf();
 
    // 设置文档名
-   void setDocument(const std::string &strDocument);
+   void setDocument(const string &strDocument);
 
    // 修改配置信息
-   void modConf( const std::string &oriKey, const std::string &oriValue,
-                 const std::string &newKey, const std::string &newValue) ;
+   void modConf( const string &oriKey, const string &oriValue,
+                 const string &newKey, const string &newValue) ;
 
    // 设置用户名
-   void setUserName(const std::string &userName);
+   void setUserName(const string &userName);
    // 设置修改单编号 
-   void setModifyNo(const std::string &value);
+   void setModifyNo(const string &value);
    
    void convert() ;
 
+   void setPSetting(const shared_ptr<boost::property_tree::ptree> &value);
+   
+   void setInterface(map<string, InterfacePtree> mapInterface) ;
 private:
-   struct stdField
-   {
-      std::string name ;
-      std::string type ;
-   };
-   
-   std::string m_userName ;
-   std::string modifyNo ;
-   
-   std::fstream m_confFile ;  // 配置文件名
 
-   std::string m_strDocument ;  // 目标表格文件名
-   std::vector<std::string> m_newInterfaceFileNames ;  // 新增的接口文件名
-   std::vector<std::string> m_modInterfaceFileNames ;  // 需要修改的接口文件名
    
-   std::map<std::string, stdField> m_stdFields ;  // 标准字段对应的描述及类型
+   string m_userName ;
+   string modifyNo ;
+
+   string m_strDocument ;  // 目标表格文件名
+   
    boost::property_tree::ptree m_ptDatatype ;  // 数据类型
    boost::property_tree::ptree m_ptStdfield ;  // 标准字段
    
-   boost::property_tree::ptree m_ptConf ;  // 全局配置信息
+   shared_ptr<boost::property_tree::ptree> pSetting ;  // 全局配置信息
    
+   // xlsx文档
+   QXlsx::Document *pDocument ;
    // 转换资源类
    GenInterface genInterface ;
 };

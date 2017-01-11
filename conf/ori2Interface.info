@@ -1,0 +1,36 @@
+功能号     					hsdoc.basic.basic.<xmlattr>.objectId
+老版本号   					hsdoc.basic.basic.<xmlattr>.version
+更新日期   					hsdoc.basic.basic.<xmlattr>.updateDate
+功能名称   					
+版本号     					hsdoc.basic.basic.<xmlattr>.version
+OpenAPI更新日期
+业务范围      			
+结果集返回 					hsdoc.basic.basic.<xmlattr>.returnResultSet
+英文名              hsdoc.basic.basic.<xmlattr>.englishName
+OpenAPI功能号       hsdoc.basic.basic.<xmlattr>.englishName
+OpenAPI版本号
+OpenAPI业务范围        
+OpenAPI业务子类
+需要登录
+调试工具
+OpenAPI业务说明     hsdoc.basic.basic.<xmlattr>.description
+功能描述            hsdoc.basic.basic.<xmlattr>.description
+import              hsdoc.parameter.import
+输入参数            <xmlattr>.flag
+参数名              <xmlattr>.name
+类型
+说明
+必须
+缺省值
+export              hsdoc.parameter.export
+输出参数            <xmlattr>.flag
+参数名              <xmlattr>.name
+类型
+说明
+必须
+缺省值
+业务说明            hsdoc.basic.basic.<xmlattr>.description
+
+
+    
+
